@@ -1,0 +1,83 @@
+
+#日志级别从低到高分为TRACE < DEBUG < INFO < WARN < ERROR < FATAL，如果设置为WARN，则低于WARN的信息都不会输出
+logging:
+  level:
+    root: info
+  path: /config/logback-spring.xml
+
+
+
+
+# 测试数据
+name: dadao
+content: 新年好呀sdfdsfsdfdsf->3
+
+## 测试数据
+test:
+  name: xiaoming
+  content: 天天向上
+
+
+## 测试数组
+array:
+  - key1
+  - key2
+
+mapTest:
+  key1: value1
+  key2: value2
+
+##复杂测试数据
+my-props: #自定义的属性和值
+  simpleProp: simplePropValue
+  arrayProps: 1,2,3,4,5
+  listProp1:
+    - name: abc
+      value: abcValue
+    - name: efg
+      value: efgValue
+  listProp2:
+    - config2Value1
+    - config2Vavlue2
+  mapProps:
+    key1: value1
+    key2: value2
+
+
+# mysql配置文件
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test1?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: mysqlyuhang
+  mail:
+    host: smtp.localhost
+    username: admin
+    password: yuhang
+    default-encoding: UTF-8
+  thymeleaf:
+    prefix: classpath:/templates/
+
+  servlet:
+    multipart:
+      max-file-size: 2GB # 最大支持文件大小
+      max-request-size: 2GB  # 最大支持请求大小
+
+mail.fromMail.addr: admin@example.com
+
+# mybatis配置
+mybatis:
+  type-aliases-package: com.example.demo.mapper
+  table:
+    auto: update
+  database:
+    type: mysql
+  config-location: classpath:config/mybatis-config.xml
+  mapper-locations: classpath:mapper/*.xml
+
+
+#服务器端口
+server:
+  port: 8080
+
