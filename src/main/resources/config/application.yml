@@ -47,7 +47,7 @@ my-props: #自定义的属性和值
 # mysql配置文件
 spring:
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://192.168.20.240:3306/test1?useUnicode=true&characterEncoding=utf-8
     username: root
     password: 123456
