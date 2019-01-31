@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
-//@MapperScan("com.example.demo.mapper")
+@MapperScan("com.example.demo.mapper")
 @EnableScheduling
 public class DemoApplication {
 
