@@ -46,11 +46,11 @@ my-props: #自定义的属性和值
 
 # mysql配置文件
 spring:
-#  datasource:
-#    driver-class-name: com.mysql.jdbc.Driver
-#    url: jdbc:mysql://localhost:3306/test1?useUnicode=true&characterEncoding=utf-8
-#    username: root
-#    password: mysqlyuhang
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.20.240:3306/test1?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: 123456
   mail:
     host: smtp.localhost
     username: admin
@@ -67,14 +67,14 @@ spring:
 mail.fromMail.addr: admin@example.com
 
 # mybatis配置
-#mybatis:
-#  type-aliases-package: com.example.demo.mapper
-#  table:
-#    auto: update
-#  database:
-#    type: mysql
-#  config-location: classpath:config/mybatis-config.xml
-#  mapper-locations: classpath:mapper/*.xml
+mybatis:
+  type-aliases-package: com.example.demo.mapper
+  table:
+    auto: update
+  database:
+    type: mysql
+  config-location: classpath:config/mybatis-config.xml
+  mapper-locations: classpath:mapper/*.xml
 
 
 #服务器端口
