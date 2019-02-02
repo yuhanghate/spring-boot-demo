@@ -47,24 +47,17 @@ my-props: #自定义的属性和值
 # mysql配置文件
 spring:
   datasource:
-    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://192.168.20.240:3306/test1?useUnicode=true&characterEncoding=utf-8
     username: root
     password: 123456
-  mail:
-    host: smtp.localhost
-    username: admin
-    password: yuhang
-    default-encoding: UTF-8
   thymeleaf:
     prefix: classpath:/templates/
-
   servlet:
     multipart:
       max-file-size: 2GB # 最大支持文件大小
       max-request-size: 2GB  # 最大支持请求大小
 
-mail.fromMail.addr: admin@example.com
 
 # mybatis配置
 mybatis:
@@ -81,3 +74,23 @@ mybatis:
 server:
   port: 9090
 
+# spring boot 监控应用
+management:
+  server:
+    port: 9090 # 管理端口
+    servlet:
+      context-path: /actuator # actuator的访问路径
+    ssl:
+      enabled: false # 关闭ssl认证
+  endpoint:
+    health:
+      show-details: always #总是显示详情
+  endpoints:
+    web:
+      exposure:
+        include: "*"  #启用所有的监控端点
+
+info:
+  app:
+    name: spring-boot-actuator
+    version: 1.0.0

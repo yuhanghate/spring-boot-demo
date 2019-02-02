@@ -39,7 +39,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
         http.authorizeRequests()
                 //放行 / 和 /open/** 路径
-                .antMatchers("/", "/open/**").permitAll()
+                .antMatchers("/", "/open/**", "/actuator/**").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()
