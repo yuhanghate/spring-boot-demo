@@ -74,21 +74,6 @@ mybatis:
 server:
   port: 9090
 
-# spring boot 监控应用
-management:
-  server:
-    port: 9090 # 管理端口
-    servlet:
-      context-path: /actuator # actuator的访问路径
-    ssl:
-      enabled: false # 关闭ssl认证
-  endpoint:
-    health:
-      show-details: always #总是显示详情
-  endpoints:
-    web:
-      exposure:
-        include: "*"  #启用所有的监控端点
 
 info:
   app:
